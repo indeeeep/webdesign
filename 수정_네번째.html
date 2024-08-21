@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid 예제</title>
+    <style>
+      
+      * {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+body {
+  margin: 0;
+  background-image: url("assets/images/ggd/images/Full.png");
+}
+
+p {
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.works-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.works-grid.works-hover-w .work-title {
+  color: #111;
+}
+
+.work-item {
+  float: left;
+  margin: 0;
+  width: 50%;
+}
+
+.work-item > a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+
+.work-caption {
+  width: 25%; /*호버링 시 우측 n% 만큼 흰색 배경*/  
+  padding: 0 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgb(255,255,255,0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.work-title {
+  font-size: 28px;
+  color: #111;
+  margin: 0 0 10px;
+}
+
+.work-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.work-image img {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: width 0.5s ease-in-out;
+}
+
+.work-item:not(:hover) .hover-image,
+.work-item:not(:hover) .work-caption {
+  transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
+}
+
+/*반응형 레이아웃*/
+@media screen and (max-width: 959px) {
+  .work-item {
+    width: 100%;
+  }
+
+  .work-caption {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+  .work-image .hover-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .work-title {
+    font-size: 20px;
+  }
+
+  .work-caption p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .work-title {
+    font-size: 18px;
+  }
+
+  .work-caption p {
+    font-size: 12px;
+  }
+}
+/*여기까지*/
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <ul class="works-grid works-grid-masonry works-hover-w" id="works-grid">
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="work-item illustration webdesign">
+            <div class="work-image">
+              <img src="assets/images/ggd/map_Goosechapel.jpg" alt="Portfolio Item"/>
+              <div class="hover-image"></div>
+              <div class="work-caption font-alt">
+                <h3 class="work-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ </br> 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+      </ul>
+      </div>
+
+      <script>
+        // JavaScript 코드는 여기에 추가합니다
+        // 클릭 여부를 저장할 변수
+        let isClicked = false;
+  
+        // 호버 시 이미지 변경 함수
+        function changeImage(element, newImageSrc) {
+          const hoverImage = element.querySelector('.hover-image');
+          const workCaption = element.querySelector('.work-caption');
+  
+          hoverImage.style.backgroundImage = `url('${newImageSrc}')`;
+          hoverImage.style.width = '75%';
+          workCaption.style.opacity = '1';
+        }
+  
+        // 클릭 시 호버 효과 토글 함수
+        function toggleHoverEffect(element) {
+          const hoverImage = element.querySelector('.hover-image');
+          const workCaption = element.querySelector('.work-caption');
+  
+          if (isClicked) {
+            hoverImage.style.width = '0';
+            workCaption.style.opacity = '0';
+            isClicked = false;
+          } else {
+            hoverImage.style.width = '75%';
+            workCaption.style.opacity = '1';
+            isClicked = true;
+          }
+        }
+  
+        // 모든 .work-item 요소에 대해 호버 및 클릭 이벤트 리스너 추가
+        const workItems = document.querySelectorAll('.work-item');
+        workItems.forEach(item => {
+          const newImage = 'assets/images/미니맵/거위성당.png'; // 새로운 이미지 경로로 변경해주세요.
+  
+          item.addEventListener('mouseover', () => {
+            if (!isClicked) {
+              changeImage(item, newImage);
+            }
+          });
+  
+          item.addEventListener('mouseout', () => {
+            if (!isClicked) {
+              const hoverImage = item.querySelector('.hover-image');
+              const workCaption = item.querySelector('.work-caption');
+  
+              hoverImage.style.width = '0';
+              workCaption.style.opacity = '0';
+            }
+          });
+  
+          item.addEventListener('click', () => {
+            toggleHoverEffect(item);
+          });
+        });
+      </script>
+    </body>
+  </html>

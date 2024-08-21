@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio describing goose goose duck." />
+    <meta name="author" content="hyerim kim" />
+    <title>0710</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="css/aos.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        AOS.init();
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="js/magnific-popup-options.js"></script>
+    <script src="js/scrollspy.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+    <style>
+      :root {
+        --guguduck-color: #f27828;
+        --body-font-family: "Noto Sans JP", sans-serif;
+        --font-weight-sd-regular: 400;
+        --font-weight-sd-medium: 500;
+        --font-weight-sd-semibold: 600;
+        --font-weight-sd-bold: 600;
+        --font-weight-sd-extrabold: 600;
+        --font-weight-sd-heavy: 700;
+      }
+
+      * {
+        box-sizing: border-box;
+        transition: all 0.3s ease-in-out;
+        font-family: var(--body-font-family);
+      }
+
+      body {
+        margin: 0;
+        background-image: url("images/Full.png");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        font-family: var(--body-font-family);
+      }
+
+      .hero {
+        text-align: center;
+        padding-top: 140px;
+      }
+
+      .main-logo {
+        max-width: 452px;
+        width: 100%;
+        animation: main-logoAnimation 0.5s ease-in-out;
+      }
+
+      @keyframes main-logoAnimation {
+        0% {
+          transform: scale(0.5);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .herotext {
+        margin: 25px 0px 140px; /*위 좌우 아래*/
+        animation: herotextAnimation 0.5s ease-in-out;
+      }
+
+      @keyframes herotextAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .herotext p {
+        font-size: 30px;
+        margin: 0;
+        color: #c9c9c9;
+      }
+
+      header {
+        position: sticky;
+        margin-top: 200px;
+        z-index: 100;
+      }
+
+      .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: rgba(36, 36, 36, 0.8);
+        position: relative;
+      }
+
+      .navbar-brand {
+        color: var(--guguduck-color);
+        font-size: calc(0.7vw + 15px);
+        text-decoration: none;
+        margin-left: 16%;
+      }
+
+      .navbar-brand:hover {
+        color: rgb(238, 238, 238);
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 20%;
+        list-style: none;
+      }
+
+      .nav-item {
+        margin-left: 60px;
+      }
+
+      .nav-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: calc(0.3vw + 14px);
+      }
+
+      .nav-link:hover {
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      @media (max-width: 980px) {
+        .navbar-collapse {
+          display: none;
+          background-color: rgba(15, 15, 15, 0.9);
+          padding: 20px;
+        }
+
+        .navbar-collapse.show {
+          display: block;
+        }
+
+        .navbar-collapse .navbar-nav {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-right: 0;
+        }
+
+        .navbar-collapse .nav-item {
+          margin-left: 0;
+          margin-bottom: 10px;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          width: 100%;
+        }
+
+        .navbar-collapse .nav-item:last-child {
+          border-bottom: none;
+        }
+
+        .navbar-collapse .nav-link {
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        .navbar-collapse .nav-link:hover {
+          color: rgba(255, 255, 255, 0.9);
+        }
+
+        .navbar-toggler {
+          display: block;
+          position: absolute;
+          right: 15%;
+          top: 50%;
+          transform: translateY(-50%);
+          border: none;
+          background-color: transparent;
+          color: #fff;
+          font-size: 24px;
+          cursor: pointer;
+        }
+
+        .navbar-toggler:focus {
+          outline: none;
+        }
+
+        .navbar-toggler-icon {
+          display: inline-block;
+          width: 24px;
+          height: 2px;
+          background-color: #fff;
+          position: relative;
+          transition: background-color 0.3s ease;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          transition: transform 0.3s ease;
+        }
+
+        .navbar-toggler-icon::before {
+          transform: translateY(-8px);
+        }
+
+        .navbar-toggler-icon::after {
+          transform: translateY(8px);
+        }
+
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+          background-color: transparent;
+        }
+
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+          transform: translateY(0) rotate(-45deg);
+        }
+
+        .navbar-collapse {
+          transition: height 0.3s ease;
+          overflow: hidden;
+        }
+
+        .navbar-collapse.show {
+          height: auto;
+        }
+
+        .navbar {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+
+      @media (min-width: 981px) {
+        .navbar-toggler {
+          display: none;
+        }
+      }
+      /*반응형 그리드 열갯수*/
+      .role-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 150px 0 0 0;
+      }
+
+      .role-grid {
+        margin-top: 50px;
+        list-style: none;
+        padding: 0 215px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 50px;
+        row-gap: 25px;
+      }
+
+      @media screen and (max-width: 1735px) {
+        .role-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .role-caption p {
+          padding: 0 15px !important;
+        }
+      }
+
+      @media screen and (max-width: 1550px) {
+        .role-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .role-caption p {
+          padding: 0 13px !important;
+        }
+      }
+
+      @media screen and (max-width: 1350px) {
+        .role-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .role-caption p {
+          padding: 0 13px !important;
+        }
+      }
+
+      @media screen and (max-width: 925px) {
+        .role-caption p {
+          padding: 20px 13px !important;
+        }
+      }
+      .role-item {
+        position: relative;
+      }
+
+      .role-image {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #8f8f8f;
+        border-radius: 40px;
+        padding: 15px 30px;
+      }
+
+      .role-image img {
+        display: block;
+        max-width: 100%;
+        min-width: 170px;
+        height: auto;
+      }
+
+      .role-image::after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0);
+
+        z-index: 1;
+        transition: background 0.1s ease-in-out;
+      }
+
+      /*호버링 시 하얀 네모*/
+      .role-item:hover .role-image::after {
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .role-item:hover .role-image img {
+        transform: scale(1.1);
+      }
+
+      .role-item:hover .role-caption p {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .role-item:hover .role-ex {
+        color: #cf3232;
+      }
+
+      .role-caption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
+        overflow: hidden;
+      }
+
+      .role-caption p {
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 2;
+        padding: 0 20px;
+        max-height: 100%;
+        overflow-y: auto;
+      }
+
+      .role-caption p::-webkit-scrollbar {
+        width: 8px; /* 스크롤바의 너비 */
+      }
+
+      .role-caption p::-webkit-scrollbar-track {
+        background-color: rgba(255, 255, 255, 0); /* 스크롤바 트랙의 배경색 */
+      }
+
+      .role-caption p::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5); /* 스크롤바 썸네일의 색상 */
+        border-radius: 3px; /* 스크롤바 썸네일의 모서리 반경 */
+      }
+
+      .role-caption p::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* 호버 시 스크롤바 썸네일의 색상 */
+      }
+
+      .role-ex {
+        color: #dadada;
+        text-align: center;
+        margin-top: 5px;
+        font-size: calc(0.25vw + 15px);
+        transition: color 0.2s ease-in-out;
+      }
+
+      .nav-container {
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .role-filter {
+        margin-top: 180px;
+        margin-bottom: 180px;
+      }
+
+      .role-filter-link {
+        color: var(--guguduck-color);
+        font-weight: var(--font-weight-sd-bold);
+        font-size: 25px;
+        text-decoration: none;
+        display: block;
+        position: relative;
+        padding: 5px 50px;
+        border-radius: 2px;
+      }
+
+      .role-filter-list {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      .role-filter-item {
+        position: relative;
+      }
+
+      .role-filter-item--active .role-filter-link {
+        background: var(--guguduck-color);
+        color: #fff;
+      }
+
+      .role-filter-item--active .role-filter-link:before {
+        display: none;
+      }
+
+      .role-filter-item--active + .role-filter-item .role-filter-link:before {
+        display: none;
+      }
+
+      .role-filter-item + .role-filter-item .role-filter-link:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 16px;
+        margin-top: -8px;
+        background: #fcc2de;
+        content: "";
+      }
+
+      .role-filter-link:hover {
+        color: #999;
+      }
+
+      @media screen and (max-width: 50%) {
+        .role-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+      .role-item {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+      .role-item.filtered {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+
+      /*미니맵 부분 css코드 시작*/
+
+      .map-grid {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .map-item {
+        float: left; /*그리드 레이아웃 안 쓰고 플롯 써서 왼쪽부터*/
+        margin: 0;
+        width: 50%; /*하나당 50%의 가로 길이를 가지게 해서 2열처럼 보이게 하기*/
+      }
+
+      /*이거 필요한지 모르겠*/
+      .map-image {
+        position: relative; /*이거는 없으면 클릭했을 때 나오는 정보들 이미지가 쥰내 크게 나오긴 함*/
+        overflow: hidden;
+      }
+
+      .map-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      /*이거뭔데 ... hover-image 거 아니가
+      .map-info-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }*/
+
+      .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: width 0.5s ease-in-out;
+      }
+
+      .map-image:hover .hover-image {
+        opacity: 1;
+      }
+
+      /*이거 왜 원본이랑 다르지 ..?;
+      .map-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }*/
+
+      .map-caption {
+        width: 25%; /*호버링 시 우측 n% 만큼 흰색 배경*/
+        padding: 0 20px;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgb(255, 255, 255, 0.85);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+      }
+
+      .map-image:hover .map-caption {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .map-title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <section class="hero">
+        <img
+          src="images/main-logo.png"
+          alt="구스구스덕 로고"
+          class="main-logo"
+        />
+        <div class="herotext">
+          <p>구린이를 위한<br />구스구스덕 파헤치기</p>
+        </div>
+      </section>
+
+      <header>
+        <!--네비게이션 바-->
+        <nav class="navbar navbar-expand-lg">
+          <div class="nav-container">
+            <a class="navbar-brand" href="index.html">
+              <strong>GOOSE GOOSE DUCK</strong>
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#hero">Main</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">Role</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#portfolio">Rule</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#news">Map</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="module pb-0">
+        <nav class="role-filter">
+          <ul class="role-filter-list">
+            <!-- 현재 페이지인 경우 role-filter-item--active 추가-->
+            <li class="role-filter-item role-filter-item--active">
+              <a class="role-filter-link" href="#" data-filter="*">All</a>
+            </li>
+            <li class="role-filter-item">
+              <a
+                class="role-filter-link"
+                href="#"
+                data-filter=".goose"
+                data-wow-delay="0.2s"
+                >거위</a
+              >
+            </li>
+            <li class="role-filter-item">
+              <a
+                class="role-filter-link"
+                href="#"
+                data-filter=".duck"
+                data-wow-delay="0.4s"
+                >오리</a
+              >
+            </li>
+            <li class="role-filter-item">
+              <a
+                class="role-filter-link"
+                href="#"
+                data-filter=".neutral"
+                data-wow-delay="0.6s"
+                >중립</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <!--대가리-->
+      <div class="container">
+        <ul class="role-grid">
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/goose.png" alt="거위" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">거위</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/dueling-dodos.png"
+                alt="결투도도새"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">결투도도새</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/bodyguard.png" alt="경호원" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">경호원</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/silencer-icon.png" alt="군기반장" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">군기반장</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/ninja-duck.png" alt="닌자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">닌자</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img src="images/구구덕 직업/vulture.png" alt="대머리수리" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">대머리수리</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/dodo.png" alt="드론" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">드론</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/bodyguard.png" alt="로비스트" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">로비스트(사진바꾸쇼)</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/bodyguard.png" alt="모험가" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">모험가(사진바꾸쇼)</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/snitch.png" alt="밀고자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">밀고자</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/morphling.png" alt="변장술사" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">변장술사</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/sheriff.png" alt="보안관" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">보안관</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/avenger-goose.png" alt="복수자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">복수자</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/street-urchin-goose.png"
+                alt="부랑아"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">부랑아</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img src="images/구구덕 직업/pigeon.png" alt="비둘기" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">비둘기</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/survivalist.png" alt="생존주의자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">생존주의자</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img src="images/구구덕 직업/falcon.png" alt="송골매" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">송골매</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/stalker.png" alt="스토커" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">스토커</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/spy.png" alt="스파이" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">스파이</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/undertaker-duck.png"
+                alt="시체운반자"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">시체운반자</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/cannibal-icon.png" alt="식인종" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">식인종</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/identity-thief-duck.png"
+                alt="신분도용범"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">신분도용범</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/assassin.png" alt="암살자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">암살자</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/engineer.png" alt="엔지니어" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">엔지니어</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/serial-killer-duck.png"
+                alt="연쇄살조범"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">연쇄살조범</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/celebrity-goose.png" alt="연예인" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">연예인</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/locksmith-goose.png" alt="열쇠공" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">열쇠공</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/engineer.png" alt="엔지니어" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">엔지니어</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/medium.png" alt="영매사" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">영매사</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/duck.png" alt="오리" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">오리</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/vigilantepng.png" alt="자경단" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">자경단</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/mortician.png" alt="장의사" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">장의사</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/preacher-duck.png" alt="전도사" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">전도사</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/professional.png" alt="전문업자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">전문업자</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/vigilantepng.png" alt="점쟁이" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">점쟁이(사진바꾸쇼)</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/mayor-goose.png" alt="정치가" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">정치가</p>
+          </li>
+          <li class="role-item">
+            <div class="role-image goose">
+              <img src="images/구구덕 직업/birdwatcher.png" alt="조류관찰자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">조류관찰자</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/warlock-duck.png" alt="주술사" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">주술사</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/astral-goose.png" alt="차원여행자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">차원여행자</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/hitman.png" alt="청부업자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">청부업자</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/esper-goose.png" alt="초능력자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">초능력자</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/tracker-goose.png" alt="추적자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">추적자</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/canadian-goose.png"
+                alt="캐나다거위"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">캐나다거위</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/cupid.png" alt="큐피드" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">큐피드</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/engineer.png" alt="탐정" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">탐정(사진바꾸쇼)</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img
+                src="images/구구덕 직업/invisibility-duck.png"
+                alt="투명오리"
+              />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">투명오리</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/party-duck.png" alt="파티 오리" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">파티오리</p>
+          </li>
+          <li class="role-item neutral">
+            <div class="role-image">
+              <img src="images/구구덕 직업/pelican.png" alt="펠리컨" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">펠리컨</p>
+          </li>
+          <li class="role-item duck">
+            <div class="role-image">
+              <img src="images/구구덕 직업/demolitionist.png" alt="폭탄광" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">폭탄광</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/bounty-goose.png" alt="한탕주의자" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">한탕주의자</p>
+          </li>
+          <li class="role-item goose">
+            <div class="role-image">
+              <img src="images/구구덕 직업/mimic.png" alt="흉내쟁이" />
+              <div class="role-caption">
+                <p>
+                  오리들이 사보타지를 성공시키거나 거위들을 다 죽이기 전에, 모든
+                  업무를 끝내면 승리합니다. <br />오리로 의심되는 크루의 정체를
+                  밝혀내고 투표해서 추방하세요.
+                </p>
+              </div>
+            </div>
+            <p class="role-ex">흉내쟁이</p>
+          </li>
+        </ul>
+      </div>
+
+      <!--미니맵 ~~~~~~~~~~~~-->
+      <div class="map-container">
+        <ul class="map-grid">
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-info-image"></div>
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-info-image"></div>
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+          <li class="map-item">
+            <div class="map-image">
+              <img src="images/ggd/map_Goosechapel.jpg" alt="Portfolio Item" />
+              <div class="map-caption font-alt">
+                <h3 class="map-title">청둥오리 저택</h3>
+                <p>설명이에용 설명 ~~ 클릭 시 고정돼요</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+
+    <script>
+      // 필터링 기능 구현
+      const filterList = document.querySelector(".role-filter-list");
+      const filterItems = document.querySelectorAll(".role-filter-item");
+      const roleItems = document.querySelectorAll(".role-item");
+
+      filterList.addEventListener("click", function (event) {
+        if (event.target.tagName === "A") {
+          event.preventDefault();
+          const filterValue = event.target.getAttribute("data-filter");
+
+          // 모든 필터 아이템에서 active 클래스 제거
+          filterItems.forEach(function (item) {
+            item.classList.remove("role-filter-item--active");
+          });
+
+          // 클릭된 필터 아이템에 active 클래스 추가
+          event.target.parentNode.classList.add("role-filter-item--active");
+
+          roleItems.forEach(function (item) {
+            item.classList.add("filtered");
+          });
+
+          setTimeout(function () {
+            roleItems.forEach(function (item) {
+              if (
+                filterValue === "*" ||
+                item.classList.contains(filterValue.substring(1))
+              ) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+              item.classList.remove("filtered");
+            });
+          }, 300);
+        }
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".navbar").sticky({ topSpacing: 0 });
+      });
+    </script>
+
+    <!--미니맵 관련 자바스크립트 -->
+    <script>
+      // JavaScript 코드는 여기에 추가합니다
+      // 클릭 여부를 저장할 변수
+      let isClicked = false;
+
+      // 호버 시 이미지 변경 함수
+      function changeImage(element, newImageSrc) {
+        const hoverImage = element.querySelector(".hover-image");
+        const workCaption = element.querySelector(".work-caption");
+
+        hoverImage.style.backgroundImage = `url('${newImageSrc}')`;
+        hoverImage.style.width = "75%";
+        workCaption.style.opacity = "1";
+      }
+
+      // 클릭 시 호버 효과 토글 함수
+      function toggleHoverEffect(element) {
+        const hoverImage = element.querySelector(".hover-image");
+        const workCaption = element.querySelector(".work-caption");
+
+        if (isClicked) {
+          hoverImage.style.width = "0";
+          workCaption.style.opacity = "0";
+          isClicked = false;
+        } else {
+          hoverImage.style.width = "75%";
+          workCaption.style.opacity = "1";
+          isClicked = true;
+        }
+      }
+
+      // 모든 .work-item 요소에 대해 호버 및 클릭 이벤트 리스너 추가
+      const workItems = document.querySelectorAll(".work-item");
+      workItems.forEach((item) => {
+        const newImage = "images/미니맵/거위성당.png"; //
+
+        item.addEventListener("mouseover", () => {
+          if (!isClicked) {
+            changeImage(item, newImage);
+          }
+        });
+
+        item.addEventListener("mouseout", () => {
+          if (!isClicked) {
+            const hoverImage = item.querySelector(".hover-image");
+            const workCaption = item.querySelector(".work-caption");
+
+            hoverImage.style.width = "0";
+            workCaption.style.opacity = "0";
+          }
+        });
+
+        item.addEventListener("click", () => {
+          toggleHoverEffect(item);
+        });
+      });
+    </script>
+  </body>
+</html>

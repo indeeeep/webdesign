@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* 폰트 설정 예시
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;*/
+
+:root {
+  --body-font-family: "Playfair Display", serif;
+  --font-weight-sd-regular: 400;
+  --font-weight-sd-medium: 500;
+  --font-weight-sd-bold: 600;
+  --font-weight-sd-heavy: 700;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+#hero {
+  position: relative;
+  height: 140vh;
+  background-image: url("image/Main_backgroundImg1.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#hero h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.24rem;
+  font-weight: var(--font-weight-sd-regular);
+}
+
+.hero-text-a {
+  top: 487px;
+  font-size: 115px;
+  position: absolute;
+  left: 10px;
+}
+
+.hero-text-b {
+  top: 603px;
+  font-size: 105px;
+  position: absolute;
+  right: 10px;
+}
+
+.bd-navigation {
+  position: absolute;
+  top: 1315px;
+  bottom: 10%;
+  right: 50px;
+  transform: translateX(-50%);
+  z-index: 600;
+}
+
+.bd-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  height: 400px;
+}
+
+.bd-navigation li {
+  position: absolute;
+  /* 메인 어바웃미 말고 메뉴당 원 하나씩 나오는거
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  */
+}
+
+.bd-navigation li a {
+  font-size: 32px;
+}
+
+.bd-navigation li:nth-child(1) {
+  top: -5%;
+  right: 205px;
+}
+.bd-navigation li:nth-child(2) {
+  top: 70.5%;
+  right: 9.5px;
+}
+.bd-navigation li:nth-child(3) {
+  top: 90%;
+  right: 130px;
+}
+.bd-navigation li:nth-child(4) {
+  top: 182%;
+  right: 234px;
+}
+.bd-navigation li:nth-child(5) {
+  top: 241%;
+  right: 110px;
+}
+
+.bd-navigation a {
+  white-space: nowrap;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+/**
+.bd-navigation li:nth-child(1) a {
+  top: 0px;
+  left: 70%;
+  transform: translateX(-50%);
+}
+.bd-navigation li:nth-child(2) a {
+  top: 0;
+  left: 15px;
+}
+**/
+
+.bd {
+  position: absolute;
+  right: 124px;
+  top: 1315px;
+  opacity: 0.8;
+  height: 800px;
+  width: auto;
+}
