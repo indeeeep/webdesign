@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+
+/* 폰트 설정 예시
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;*/
+
+:root {
+  --body-font-family: "Playfair Display", serif;
+  --font-weight-sd-regular: 400;
+  --font-weight-sd-medium: 500;
+  --font-weight-sd-bold: 600;
+  --font-weight-sd-heavy: 700;
+  --vh: 1vh;
+  --primary-color: #ffffff;
+  --secondary-color: #0a0a0a;
+  --accent-color: #ffcc00;
+  --background-color: rgba(50, 65, 139, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font-family);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+section {
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+  overflow: auto;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("image/Main_backgroundImg1.png");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#hero h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.24rem;
+  font-weight: var(--font-weight-sd-regular);
+}
+
+.hero-text-a {
+  top: 487px;
+  font-size: 115px;
+  position: absolute;
+  left: 10px;
+}
+
+.hero-text-b {
+  top: 603px;
+  font-size: 105px;
+  position: absolute;
+  right: 10px;
+}
+
+#main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(50, 65, 139, 0.7);
+}
+.navbar {
+  position: absolute;
+  right: 40px;
+  top: 35px;
+  width: 350px;
+  height: 980px; /* 화면 높이에서 상하 여백을 뺀 높이 */
+  max-height: calc(100vh - 50px);
+}
+
+.navbar svg {
+  width: 100%; /* 원본 크기 */
+  height: 100%;
+}
+
+.navbar text {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  fill: white;
+  font-weight: var(--font-weight-sd-regular);
+}
+
+.navbar a:hover text {
+  fill: #ffcc00;
+}
+
+.main-contents {
+  position: absolute;
+  top: 140px;
+  left: 75px;
+}
+
+.main-text-a {
+  font-family: "Playfair Display", serif;
+  font-weight: var(--font-weight-sd-regular);
+  font-size: 65px;
+}
+
+.main-text-b {
+  font-family: "Song Myung", serif;
+  font-weight: var(--font-weight-sd-regular);
+  font-size: 36px;
+}
+
+.main-text-sub {
+  position: absolute;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: var(--font-weight-sd-regular);
+  margin-top: 20px;
+  margin-left: 5px;
+}
+
+.what {
+  position: relative;
+  width: 1270px;
+  height: 450px;
+  margin-top: 200px;
+  background-color: rgb(255, 255, 255, 0.6);
+}
+
+/*
+@media (max-height: 1200px) {
+  .navbar {
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+}
+
+@media (max-height: 1000px) {
+  .navbar {
+    transform: scale(0.7);
+    transform-origin: top right;
+  }
+}*/
+
+#about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(112, 52, 57);
+}
+
+.about {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  width: 100%;
+  top: 10%;
+  height: 90vh;
+}
+
+.about-image {
+  position: absolute;
+  top: 3.5%;
+  left: 15.5%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-group {
+  position: absolute;
+}
+
+.text-group h2 {
+  font-size: 32px;
+  margin-bottom: -21px;
+  margin-top: 0;
+}
+
+.career-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: -48px;
+}
+
+.about-dates {
+  margin-bottom: 5px;
+  width: auto; /* 날짜의 최대 너비 설정 */
+  margin-right: 20px; /* 날짜와 내용 사이의 간격 */
+}
+
+.about-contents {
+  flex: 1; /* 남은 공간을 모두 차지 */
+  line-height: 1.2;
+  list-style-type: none;
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+/* skill과 interested_in 섹션에 대한 스타일 수정 */
+.skill,
+.Interested_in {
+  text-align: right;
+}
+
+.skill h2,
+.Interested_in h2 {
+  margin-bottom: 10px; /* h2와 리스트 사이 간격 조정 */
+}
+
+.skill ul,
+.Interested_in ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill li,
+.Interested_in li {
+  margin-bottom: -3px; /* 리스트 아이템 간 간격 */
+}
+
+/* Character 섹션에 대한 스타일 추가 */
+.Character ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Character li {
+  margin-bottom: 5px;
+}
+.text-group .about-dates,
+.text-group .about-contents {
+  font-size: 24px;
+}
+
+.skill .Interested_in .Character {
+}
+
+/* 예시 위치 지정 - 실제 이미지에 맞게 조정 필요 */
+.career {
+  top: -5%;
+  left: 15%;
+}
+.education {
+  top: 25%;
+  left: 25%;
+}
+.skill {
+  top: 30%;
+  left: 15%;
+}
+.Interested_in {
+  top: 68%;
+  left: 7%;
+}
+.Character {
+  top: 75%;
+  left: 32%;
+}
