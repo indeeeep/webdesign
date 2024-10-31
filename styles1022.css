@@ -1,0 +1,642 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Song+Myung&display=swap");
+
+/* 폰트 설정 예시
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: italic;*/
+
+:root {
+  --body-font-family: "Inter", sans-serif;
+  --font-weight-sd-thin: 300;
+  --font-weight-sd-regular: 400;
+  --font-weight-sd-medium: 500;
+  --font-weight-sd-bold: 600;
+  --font-weight-sd-heavy: 700;
+  --vh: 1vh;
+  --primary-color: #ffffff;
+  --secondary-color: #0a0a0a;
+  --accent-color: #ffcc00;
+  --background-color: rgba(50, 65, 139, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font-family);
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  position: relative;
+}
+
+section {
+  height: calc(var(--vh, 1vh) * 100);
+  width: 100%;
+
+  overflow: auto;
+}
+
+#hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("image/Main_backgroundImg1.png");
+  background-size: auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+#hero h1 {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.24rem;
+  font-weight: var(--font-weight-sd-regular);
+}
+
+.hero-text-a {
+  top: 487px;
+  font-size: 115px;
+  position: absolute;
+  left: 10px;
+}
+
+.hero-text-b {
+  top: 603px;
+  font-size: 105px;
+  position: absolute;
+  right: 10px;
+}
+
+/*스킬 프로그레스 바*/
+.skill-progress-container {
+  position: absolute;
+  right: 5%;
+  top: 68%;
+  width: 300px;
+  font-family: "Inter", sans-serif;
+  opacity: 0; /* 추가: 초기에는 숨김 상태 */
+  transform: translateY(20px); /* 추가: 약간 아래에서 시작 */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* 추가: 부드러운 등장 효과 */
+}
+
+.skill-progress-container.visible {
+  /* 추가: 보이는 상태 클래스 */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  font-size: 0.925rem;
+}
+
+.skill-bar-bg {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  position: relative;
+  transition: width 1s ease-out;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+.skill-bar-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 32px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2));
+  filter: blur(4px);
+}
+
+/* 네비게이션 */
+#index {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navbar {
+  position: absolute;
+  right: 40px;
+  top: 35px;
+  width: 350px;
+  height: 980px;
+  max-height: calc(100vh - 50px);
+}
+
+.navbar svg {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar text {
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  fill: white;
+  font-weight: var(--font-weight-sd-regular);
+}
+
+.navbar a:hover text {
+  fill: #ffcc00;
+}
+
+.index-contents {
+  position: absolute;
+  top: 8%;
+  left: 5%;
+  width: calc(100% - 400px); /* navbar 너비를 고려한 조정 */
+}
+
+/* 제목 스타일 */
+.index-text {
+  margin-bottom: 20px;
+}
+
+.index-text-a {
+  font-family: "Playfair Display", serif;
+  font-weight: var(--font-weight-sd-regular);
+  font-size: 65px;
+}
+
+.index-text-b {
+  font-family: "Song Myung", serif;
+  font-weight: var(--font-weight-sd-regular);
+  font-size: 36px;
+}
+
+.index-text-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: var(--font-weight-sd-regular);
+  margin-bottom: 60px;
+}
+
+/* 떠다니는 요소들 */
+.floating-elements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating-item {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.floating-item.slow {
+  width: 32px;
+  height: 32px;
+  top: 30%;
+  left: 20%;
+  filter: blur(4px);
+  animation: float-slow 8s infinite ease-in-out;
+}
+
+.floating-item.medium {
+  width: 38px;
+  height: 38px;
+  top: 160px;
+  right: 80px;
+  filter: blur(6px);
+  background: rgba(255, 255, 255, 0.05);
+  animation: float-medium 6s infinite ease-in-out;
+}
+
+.floating-item.fast {
+  width: 64px;
+  height: 64px;
+  bottom: 80px;
+  left: 33%;
+  filter: blur(8px);
+  background: rgba(255, 255, 255, 0.2);
+  animation: float-fast 4s infinite ease-in-out;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -20px);
+  }
+}
+
+@keyframes float-medium {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-10px, -15px);
+  }
+}
+
+@keyframes float-fast {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(5px, -10px);
+  }
+}
+
+/* 카테고리와 프로젝트 리스트 */
+.categories {
+  position: relative;
+  z-index: 2;
+  margin-top: 80px;
+  display: flex;
+  gap: 40px;
+  width: 100%;
+}
+
+.category-column {
+  flex: 1; /* 동일한 너비로 분할 */
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.category {
+  margin-bottom: 0;
+}
+
+.category {
+  margin-bottom: 30px;
+  min-width: 0; /* 그리드 아이템 최소 너비 설정 */
+}
+
+.category h2 {
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+  padding: 6px 0;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: 100%; /* 부모 너비 전체 사용 */
+}
+
+.project-number {
+  font-size: 14px;
+  opacity: 0.5;
+  min-width: 24px;
+}
+
+.project-name {
+  font-size: 18px;
+  min-width: 120px;
+}
+
+.project-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 호버 효과 */
+.category:hover .project-item {
+  transform: translateX(12px);
+  opacity: 1;
+}
+
+/* 반응형 대응 */
+@media (max-width: 1200px) {
+  .categories {
+    grid-template-columns: 1fr; /* 화면이 좁아지면 1열로 변경 */
+    gap: 20px;
+  }
+}
+
+/*여기까지 */
+
+/*
+@media (max-height: 1200px) {
+  .navbar {
+    transform: scale(0.8);
+    transform-origin: top right;
+  }
+}
+
+@media (max-height: 1000px) {
+  .navbar {
+    transform: scale(0.7);
+    transform-origin: top right;
+  }
+}*/
+
+#about {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.about-Cassiopeia {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  width: auto;
+  height: 90vh;
+}
+
+.about-image {
+  position: absolute;
+  top: 17.5%;
+  left: 16.5%;
+  width: auto;
+  height: auto;
+}
+
+.about-text-group {
+  position: absolute; /* 가장 가까운 positioned 조상 요소에 대해 절대적으로 위치합니다 */
+}
+
+.about-text-group h2 {
+  font-size: 26px;
+  margin-bottom: 2px; /*제목이랑 항목들 사이 간격*/
+  margin-top: 0;
+}
+
+.career-item,
+.Education-item {
+  display: flex;
+  align-items: flex-start; /* 자식 요소들을 위쪽으로 정렬합니다 */
+  margin-bottom: -5px;
+}
+
+.about-dates {
+  font-size: 20px;
+  margin-bottom: 5px;
+  min-width: 235px;
+  flex-shrink: 0; /* 날짜 영역 크기 고정 */
+  letter-spacing: 0.04em;
+}
+
+.about-contents {
+  font-size: 20px;
+  line-height: 1.2;
+  list-style-type: none;
+  text-align: left;
+  padding: 0; /* 기본 패딩 제거 */
+}
+
+/* skill과 interested_in 섹션에 대한 스타일 수정 */
+.Interested_in {
+  text-align: right;
+}
+
+/* Character 섹션에 대한 스타일 추가 */
+.skill ul,
+.Interested_in ul,
+.Character ul,
+.Interested_in ul,
+.skill ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-text-group li {
+  font-size: 20px;
+  margin-bottom: -5px; /*<ul> 쓴 애들 li 사이 간격*/
+}
+
+/* 예시 위치 지정 - 실제 이미지에 맞게 조정 필요 */
+.career {
+  top: 9%;
+  left: 18%;
+}
+.education {
+  top: 38%;
+  left: 25.5%;
+}
+
+.Interested_in {
+  top: 77.5%;
+  left: 8.5%;
+}
+.Character {
+  top: 85.5%;
+  left: 32.5%;
+}
+
+.about-profile {
+  position: absolute;
+  top: 8%;
+  right: 4.8%;
+  text-align: right;
+}
+
+.about-profile > h2   /*김혜림*/ {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: var(--font-weight-sd-regular);
+  margin-right: 15px; /* 두 요소 사이 간격 */
+  vertical-align: middle; /* 세로 정렬 맞추기 */
+  margin-bottom: 1%;
+}
+
+.about-profile > h3  /*Kim HyeRim*/ {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: var(--font-weight-sd-thin);
+  vertical-align: middle; /* 세로 정렬 맞추기 */
+  margin-bottom: -5%;
+}
+
+.about-profile-img {
+  margin-bottom: 8%;
+}
+
+.about-profile > h5  /*1997.12.6.*/ {
+  font-size: 20px;
+  font-weight: var(--font-weight-sd-thin);
+  margin-bottom: 3%;
+  letter-spacing: 0.05em;
+}
+
+.about-info {
+  font-size: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.about-values,
+.about-labels {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.about-labels {
+  font-weight: var(--font-weight-sd-medium);
+}
+
+.about-values {
+  margin-right: 50px;
+}
+
+.constellation-overlay {
+  position: absolute;
+  top: 15%;
+  left: 47%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* 다른 콘텐츠 뒤에 위치하도록 설정 */
+  pointer-events: none; /* 이미지가 상호작용을 방해하지 않도록 설정 */
+}
+
+/*
+
+#about {
+  background-color: rgba(171, 206, 88, 0.6);
+}
+#index {
+  background-color: rgba(230, 114, 60, 0.5);
+}
+
+#graphic {
+  background-color: rgba(196, 163, 219, 0.5);
+}
+
+#web {
+  background-color: rgba(163, 217, 219, 0.5);
+}
+
+#ui-ux {
+  background-color: rgba(216, 211, 142, 0.5);
+}
+
+#art {
+  background-color: rgba(219, 163, 191, 0.5);
+} */
+
+/*17:34*/
+.minimal-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.nav-pulse .nav-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.nav-pulse .pulse {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-pulse .pulse::before {
+  content: "★";
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3);
+  transition: color 0.3s ease;
+}
+
+.nav-pulse .pulse::after {
+  content: "★";
+  position: absolute;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.3);
+  animation: pulseStar 3s infinite;
+}
+
+@keyframes pulseStar {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.nav-pulse .nav-button:hover .pulse::before {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nav-tooltip {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-button:hover + .nav-tooltip {
+  opacity: 0.5;
+}
